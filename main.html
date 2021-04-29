@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .parent{
+            
+           width: 700px;
+           height: 800px;
+           padding: 50px;
+           background-color: burlywood;
+
+        }
+        .infinite{
+            position: relative;
+            top: 200px;
+        }
+
+        .infinite::before{
+            content: "";
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            border: 10px solid green;
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(45deg);
+            left: 309px;
+            background-color: green;
+        }
+        .infinite::after{
+            content: "";
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            border: 10px solid green;
+            border-radius: 50% 0 50% 50%;
+            transform: rotate(45deg);
+            background: green;
+        }
+        .transformx{
+            transform: rotate(90deg);
+            top: 396px;
+            left: 25px;
+        }
+        .stem{
+            width: 324px;
+            height: 100px;
+            position: relative;
+            transform: rotate(59deg);
+            top: 459px;
+            left: 229px;
+            border-radius: 50%/100px 100px 0 0;
+            border: solid 5px green;
+            border-color: green transparent transparent transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="infinite"></div>
+        <div class="infinite transformx"></div>
+        <div class="stem"></div>
+    </div>
+</body>
+
+</html>
